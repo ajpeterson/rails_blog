@@ -1,0 +1,23 @@
+<h1 class="title">
+  <%= @post.title %>
+</h1>
+
+<p class="date">
+  Submitted <%= time_ago_in_words(@post.created_at) %> ago
+  <%= link_to 'Edit Post', edit_post_path(@post) %>
+</p>
+
+<p class="thoughts">
+  <%= @post.thoughts %>
+</p><br />
+
+<div id="comments">
+  <h3><%= @post.comments.count %> comments</h3>
+  <%= render @post.comments %>
+
+  <h3>Leave a Comment</h3>
+  <%= render 'comments/form' %>
+
+</div>
+
+<%= link_to 'Back', posts_path %>

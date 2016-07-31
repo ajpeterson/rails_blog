@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <header class="main_nav">
+      <ul>
+        <li><%= link_to "Coding the Blog", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+      </ul>
+      <ul>
+        <li><%= link_to "Log Out", root_path %></li>
+        <li><%= link_to "Create a New Post", new_post_path %></li>
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>
