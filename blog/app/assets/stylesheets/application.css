@@ -1,15 +1,153 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/** {
+  outline: 1px solid red;
+}*/
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Courier, serif;
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 100%;
+  color: #888888;
+}
+
+form {
+  font-size: 12px;
+}
+
+h2 {
+  color: #225378;
+}
+
+a {
+  text-decoration: none;
+  color: #225378;
+}
+
+#global_wrapper {
+  min-height: 100%;
+  position: relative;
+  max-width: 800px;
+  min-width: 650px;
+  margin: 0px auto;
+  padding-top: 0px;
+  background-color: #ffffff;
+}
+
+#site_title {
+  font-family: Arial, sans-serif;
+  font-size: 3em;
+  color: #acf0f2;
+}
+
+.main_nav ul li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+.links {
+  text-decoration: none;
+  color: #eb7f00;
+}
+
+#header_right {
+  float: right;
+  clear: both;
+  vertical-align: text-top;
+}
+
+.content_wrapper {
+  clear: both;
+  margin: 0px;
+  padding-left: 20px;
+  padding-top: 25px;
+}
+
+.post_container {
+  padding-top: 25px;
+}
+
+.post_container p {
+  display: inline;
+  padding-right: 15px;
+}
+
+.post_form {
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.post_form input {
+  width: 600px;
+}
+
+.post_form textarea {
+  width: 600px;
+  height: 200px;
+}
+
+#submit {
+  border-radius: 5px;
+}
+
+.thoughts {
+  width: 600px;
+  padding-left: 25px;
+}
+
+.comments {
+  padding-left: 50px;
+}
+
+.comment_form {
+  padding-bottom: 20px;
+  width: 250px;
+}
+
+#comment_count {
+  margin-bottom: 0px;
+}
+
+#comment_form {
+  margin-top: 50px;
+}
+
+.commenter_name {
+  padding-top: 25px;
+}
+
+.comment_details {
+  display: inline;
+  padding-right: 15px;
+}
+
+.about_text {
+  margin: auto;
+  width: 600px;
+  line-height: 150%;
+}
+
+#footer {
+  font-family: Arial, sans-serif;
+  height: 30px;
+  border-top: 1px solid #dfe0de;
+  text-align: center;
+  padding: 20px;
+  color: #225378;
+}
+
+a:hover {
+  color: #1695a3;
+}
+/*eb7f00
+f3ffe2
+acf0f2
+1695a3
+225378*/

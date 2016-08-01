@@ -1,8 +1,8 @@
 <div class="comment_container">
-  <h4><%= comment.commenter %></h4>
+  <h3 class="commenter_name"><%= comment.commenter %></h3>
   <p><%= comment.body %></p>
-  <p><%= time_ago_in_words(comment.created_at) %> ago</p>
-  <p><%= link_to 'Delete Comment', [comment.post, comment],
+  <p class="comment_details"><%= time_ago_in_words(comment.created_at) %> ago</p>
+  <p class="comment_details"><%= link_to 'Delete Comment', [comment.post, comment],
                   method: :delete,
                   data: { confirm: 'Are you sure?' } %>
   </p>

@@ -4,22 +4,29 @@
     <title>Blog</title>
     <%= csrf_meta_tags %>
 
-     <%= stylesheet_link_tag 'normalize' %>
+    <%= stylesheet_link_tag 'normalize' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header class="main_nav">
-      <ul id="header_left">
-        <li id="site_title"><%= link_to "Coding the Blog", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
-      </ul>
-      <ul id="header_right">
-        <li><%= link_to "Log Out", root_path %></li>
-        <li><%= link_to "Create a New Post", new_post_path %></li>
-      </ul>
-    </header>
-    <%= yield %>
+    <div id="global_wrapper">
+      <header class="main_nav">
+        <p id="header_left">
+          <%= link_to "$('#future').show();", root_path, :id => "site_title" %>
+        </p>
+        <ul id="header_right">
+          <li><%= link_to "About", about_path, :class => "links" %></li>
+          <li><%= link_to "Create a New Post", new_post_path, :class => "links" %></li>
+          <li><%= link_to "Log Out", root_path, :class => "links" %></li>
+        </ul>
+      </header>
+      <div class="content_wrapper">
+        <%= yield %>
+      </div>
+      <footer>
+        <p id="footer">$('#future').show(); is the property of Andrew Peterson | &copy; 2016 | All Rights Reserved</p>
+      </footer>
+    </div>
   </body>
 </html>
