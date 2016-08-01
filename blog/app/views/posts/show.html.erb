@@ -11,13 +11,18 @@
   <%= @post.thoughts %>
 </p><br />
 
+<hr class="line">
+
 <div class="comments">
   <h3 id="comment_count"><%= @post.comments.count %> comments</h3>
   <%= render @post.comments %>
+</div>
 
+<hr class="line">
+
+<div class="comments">
   <h4 id="comment_form">Leave a Comment</h4>
   <%= render 'comments/form' %>
-
 </div>
 
 <%= link_to 'Back', posts_path %>
