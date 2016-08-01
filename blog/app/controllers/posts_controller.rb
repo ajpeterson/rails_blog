@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-
-  http_basic_authenticate_with name: 'ajpeterson', password: 'dbcSeattle#1', except: [:index, :show]
+ before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @posts = Post.all.order("created_at DESC")

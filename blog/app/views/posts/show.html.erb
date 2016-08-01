@@ -4,20 +4,30 @@
 
 <p class="date">
   Submitted <%= time_ago_in_words(@post.created_at) %> ago
-  <%= link_to 'Edit Post', edit_post_path(@post) %>
+  <% if user_signed_in? %>
+    <%= link_to 'Edit Post', edit_post_path(@post) %>
+    <%= link_to 'Delete Post', post_path(@post),
+                              method: :delete,
+                              data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </p>
 
 <p class="thoughts">
   <%= @post.thoughts %>
 </p><br />
 
+<hr class="line">
+
 <div class="comments">
   <h3 id="comment_count"><%= @post.comments.count %> comments</h3>
   <%= render @post.comments %>
+</div>
 
+<hr class="line">
+
+<div class="comments">
   <h4 id="comment_form">Leave a Comment</h4>
   <%= render 'comments/form' %>
-
 </div>
 
 <%= link_to 'Back', posts_path %>
