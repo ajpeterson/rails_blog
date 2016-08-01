@@ -2,9 +2,5 @@
   <div class="post_container">
     <h2 class="title"><%= link_to post.title, post %></h2>
     <p class="date post_details"><%= post.created_at.strftime("%B %d, %Y") %></p>
-    <p class="post_details"><%= link_to 'Edit Post', edit_post_path(post) %></p>
-    <p class="post_details"><%= link_to 'Delete Post', post_path(post),
-                                method: :delete,
-                                data: { confirm: 'Are you sure?' } %></p>
   </div>
 <% end %>

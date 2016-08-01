@@ -152,6 +152,10 @@ a:hover {
   color: #1695a3;
 }
 
+.date a {
+  padding-left: 10px;
+}
+
 .line {
   margin: auto;
   clear: both;
