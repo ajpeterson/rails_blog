@@ -1,0 +1,8 @@
+* {
+  outline: 1px solid red;
+}
+
+body {
+  max-width: 1000px;
+  min-width: 650px;
+}
