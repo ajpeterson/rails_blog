@@ -14,7 +14,10 @@ body {
 }
 
 #admin_login {
-  color: #888888;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  color: #dddddd;
 }
 
 form {
