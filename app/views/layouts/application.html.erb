@@ -14,10 +14,7 @@
       <header class="main_nav">
         <p id="header_left">
           <%= link_to "Coding A Better Future", root_path, :id => "site_title" %><br />
-          My life with Bud, Norwall and
-          <% if !user_signed_in? %>
-            <%= link_to "Cinnamon", new_user_session_path, :id => "admin_login" %>
-          <% end %>
+          My life with Bud, Norwall and<%= link_to "Cinnamon", new_user_session_path, :id => "admin_login" %>
         </p>
         <ul id="header_right">
           <li><%= link_to "About", about_path, :class => "links" %></li>
